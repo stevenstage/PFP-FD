@@ -31,29 +31,7 @@ Total __1.9B__ observations 
 | Inter-turn resistance value (R_it) | 0.1385      | 0.0958            | 0.1087            | Ohm    |
 | Inter-coil resistance value (R_cc) | 0.0409      | 0.3021            | 0.1534            | Ohm    |
 
-#### Fault Label  
-
-In 1st PMSM (1.0 kW) as example:
-
-| **Fault label** | **Fault severity (%)** | **Fault type**           |
-|-----------------|------------------------|--------------------------|
-| 0               | 0.00                   | inter-coil short circuit |
-| 0               | 0.00                   | inter-turn short circuit |
-| 1               | 0.68                   | inter-coil short circuit |
-| 2               | 0.81                   | inter-coil short circuit |
-| 3               | 1.01                   | inter-coil short circuit |
-| 4               | 1.34                   | inter-coil short circuit |
-| 5               | 2.00                   | inter-coil short circuit |
-| 6               | 2.26                   | inter-turn short circuit |
-| 7               | 2.70                   | inter-turn short circuit |
-| 8               | 3.35                   | inter-turn short circuit |
-| 9               | 3.93                   | inter-coil short circuit |
-| 10              | 4.41                   | inter-turn short circuit |
-| 11              | 6.48                   | inter-turn short circuit |
-| 12              | 7.56                   | inter-coil short circuit |
-| 13              | 12.17                  | inter-turn short circuit |
-| 14              | 21.69                  | inter-turn short circuit |
-
+## Fine-tuning Dataset   
 
 ## Key Result Comparison
 
