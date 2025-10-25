@@ -53,3 +53,23 @@ In 1st PMSM (1.0 kW) as example:
 | 12              | 7.56                   | inter-coil short circuit |
 | 13              | 12.17                  | inter-turn short circuit |
 | 14              | 21.69                  | inter-turn short circuit |
+
+
+## Key Result Comparison
+
+Here are the results of SOTA deep learning models and fine-tuned foundation models for fault diagnosis.
+
+The SOTA models are from [tsai](https://github.com/timeseriesAI/tsai):
+- [XCM](https://github.com/timeseriesAI/tsai/blob/main/tsai/models/XCM.py) -
+  An Explainable Convolutional Neural Network (Fauvel, 2021)
+  ([paper](https://hal.inria.fr/hal-03469487/document))
+- [TSPerceiver](https://github.com/timeseriesAI/tsai/blob/main/tsai/models/TSPerceiver.py) -
+  Adapted from Perceiver IO (Jaegle, 2021)
+  ([paper](https://arxiv.org/abs/2107.14795))
+- [TSSequencerPlus](https://github.com/timeseriesAI/tsai/blob/main/tsai/models/TSSequencerPlus.py) -
+  Adapted from Sequencer (Tatsunami, 2022)
+  ([paper](https://arxiv.org/abs/2205.01972))
+- [PatchTST](https://github.com/timeseriesAI/tsai/blob/main/tsai/models/PatchTST.py) -  
+  (Nie, 2022)([paper](https://arxiv.org/abs/2211.14730))  
+
+The foundation models are from [Mantis](https://github.com/vfeofanov/mantis).
