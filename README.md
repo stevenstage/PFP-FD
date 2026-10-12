@@ -85,12 +85,6 @@ A chronological record of dataset curation, model development, experiments, and 
 - **Curation:** Organizing metadata on motor types, signal modalities, operating conditions, fault severity, and healthy-data availability.
 - **Research:** Preparing the data foundation for a unified motor foundation model.
 
-### [YYYY-MM-DD] — Update Title
-- **Added:** New datasets, models, or functionality.
-- **Improved:** Data processing, training, or evaluation pipeline.
-- **Experiments:** Newly completed validation or benchmark results.
-- **Next:** Planned work for the next development stage.
-
 ## 📖 Citation
 
 **Data-Efficient Motor Condition Monitoring with Time Series Foundation Models**
