@@ -1,53 +1,64 @@
-# A Novel Pre-training and Fine-tuning Paradigm for Data-Efficient Cross-Motor Fault Diagnosis
-Official implemental code for the paper "A Novel Pre-training and Fine-tuning Paradigm for Data-Efficient Cross-Motor Fault Diagnosis"
+# UniMotorFM
+### A Foundation Model for Electric Motor Fault Diagnosis and Condition Monitoring
 
-## Pre-training Dataset    
-### Falut Diagnosis
-The falut diagnosis raw dataset was collected and arranged by the [Korea Advanced Institute of Science and Technology](https://www.sciencedirect.com/science/article/pii/S2352340923000707), and the adaptation edition used in this work can be found in [![huggingface](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Dataset-FFD21E)](https://huggingface.co/datasets/dydyd/current_vibration)
+**UniMotorFM** is a research project dedicated to developing transferable time-series foundation models for electric motor fault diagnosis and condition monitoring.
 
-__including:__  
-- 1.0 kW, 1.5 kW and 3.0kW PMSM
+Our goal is to move beyond motor-specific models toward a unified representation that can generalize across different motors and operating conditions, while supporting diverse downstream tasks with limited labeled data or healthy data only.
 
-Total __576M__ and __147M__ time points for current signal and vibration signal respectively
+## 🎯 Research Vision
 
+Electric motor signals vary with motor design, operating conditions, sensor configurations, and degradation states. A key challenge is to learn representations that preserve condition-relevant information while remaining transferable across different motor systems.
 
-Total __1.9B__ observations 
+We investigate three interconnected directions:
 
-#### Details   
+- **Data-efficient transfer:** Adapting pretrained time-series models to new motors with limited labeled data.
+- **Transferable spectral knowledge:** Learning frequency-aware representations that capture reusable fault information across different motor characteristics.
+- **Health assessment with healthy data:** Exploring healthy-data-based adaptation and regression-oriented approaches for motor condition assessment, reducing reliance on labeled fault data.
 
-| Parameters                | 1st PMSM (1.0 kW) | 2nd PMSM (1.5 kW) | 3rd PMSM (3.0 kW) | Unit   |
-|----------------------------|-------------------|--------------------|-------------------|--------|
-| Manufacturing company       | Higen motors      | Higen motors       | Higen motors      | -      |
-| Rated power                 | 1000              | 1500               | 3000              | Watt   |
-| Input voltage               | 380               | 380                | 380               | AC Voltage |
-| Frequency                   | 60                | 60                 | 60                | Hz     |
-| Number of phase             | 3                 | 3                  | 3                 | Phase  |
-| Number of pole              | 4                 | 4                  | 4                 | -      |
-| Rated torque                | 3.18              | 4.77               | 9.55              | Nm     |
-| Rated speed                 | 3000              | 3000               | 3000              | RPM    |
-| Synchronous inductance      | 0.0               | 0.0                | 0.0               | H      |
-| Magnetic flux               | 400               | 350                | 300               | mT     |
-| Rotor inertia               | 2.07              | 7.48               | 14.34             | Kgm²   |
-| Inter-turn resistance value (R_it) | 0.1385      | 0.0958            | 0.1087            | Ohm    |
-| Inter-coil resistance value (R_cc) | 0.0409      | 0.3021            | 0.1534            | Ohm    |
+Together, these directions contribute toward a general-purpose foundation model for motor diagnosis and health monitoring.
 
-## Fine-tuning Dataset   
+## 🔬 Research Highlights
 
-## Key Result Comparison
+### 1. Data-Efficient Cross-Motor Fault Diagnosis
 
-Here are the results of SOTA deep learning models and fine-tuned foundation models for fault diagnosis.
+*A Novel Pre-training and Fine-tuning Paradigm for Data-Efficient Cross-Motor Fault Diagnosis*
 
-The SOTA models are from [tsai](https://github.com/timeseriesAI/tsai):
-- [XCM](https://github.com/timeseriesAI/tsai/blob/main/tsai/models/XCM.py) -
-  An Explainable Convolutional Neural Network (Fauvel, 2021)
-  ([paper](https://hal.inria.fr/hal-03469487/document))
-- [TSPerceiver](https://github.com/timeseriesAI/tsai/blob/main/tsai/models/TSPerceiver.py) -
-  Adapted from Perceiver IO (Jaegle, 2021)
-  ([paper](https://arxiv.org/abs/2107.14795))
-- [TSSequencerPlus](https://github.com/timeseriesAI/tsai/blob/main/tsai/models/TSSequencerPlus.py) -
-  Adapted from Sequencer (Tatsunami, 2022)
-  ([paper](https://arxiv.org/abs/2205.01972))
-- [PatchTST](https://github.com/timeseriesAI/tsai/blob/main/tsai/models/PatchTST.py) -  
-  (Nie, 2022)([paper](https://arxiv.org/abs/2211.14730))  
+Investigates how pre-training and fine-tuning can improve fault diagnosis on target motors when labeled data are scarce.
 
-The foundation models are from [Mantis](https://github.com/vfeofanov/mantis).
+### 2. Transferable Spectral Priors
+
+*Learning Transferable Spectral Priors for Cross-Motor Fault Diagnosis with Time-Series Foundation Model*
+
+Studies how transferable spectral priors can help foundation models capture fault-related information across motors with different physical and frequency characteristics.
+
+### 3. Healthy-Data-Based Condition Assessment
+
+Explores adapting pretrained representations using healthy operating data and formulating condition assessment as a regression-oriented problem. This direction aims to support practical monitoring scenarios where labeled degradation or fault data are difficult to obtain.
+
+## 🧭 Roadmap
+
+- [x] Investigate data-efficient cross-motor fault diagnosis.
+- [x] Explore transferable spectral priors for cross-motor generalization.
+- [x] Develop a healthy-data-based adaptation approach for regression-oriented condition assessment.
+- [ ] Unify datasets, model interfaces, and evaluation protocols across motor systems.
+- [ ] Extend evaluation to diverse operating conditions and unseen motor domains.
+- [ ] Improve reproducibility and prepare reusable training, adaptation, and inference pipelines.
+- [ ] Investigate online health monitoring and continuous degradation assessment.
+
+## 📦 Data and Resources
+
+- **Pre-training dataset:** [PMSM Current and Vibration Dataset](https://huggingface.co/datasets/dydyd/current_vibration)
+- **Code and models:** Training scripts, configurations, checkpoints, and evaluation tools will be organized as the project evolves.
+
+## 🗓️ Updates
+
+Record major releases, experiments, and research milestones here.
+
+- **[YYYY-MM-DD] — [Update title]**
+  - Added: New model, dataset, or functionality.
+  - Improved: Training, transfer, or evaluation pipeline.
+  - Results: Key findings and relevant experiment details.
+
+## 📌 Project Status
+
+UniMotorFM is an evolving research initiative. Its long-term objective is to establish a unified and transferable foundation-model framework for electric motor fault diagnosis, degradation assessment, and condition monitoring.
